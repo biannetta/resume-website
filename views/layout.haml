@@ -1,0 +1,21 @@
+%html{:lang => "en" }
+  %head
+    %title Benjamin Iannetta
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}/
+    %link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
+
+  %body
+    #header
+      %h1.title Benjamin Iannetta
+    %div.wrap
+      %div.container
+        #navigation{:class => 'col-md-2'}
+          %ul{:class => ['nav', 'nav-pills', 'nav-stacked']}
+            - @links.each do |link|
+              %li
+                %a{:href => "#{link[:href]}"} #{link[:name]}
+        #content{:class => 'col-md-10'}
+          = yield
+    #footer
+      %div.container 
+        %p.text-muted &copy; Copyright Benjamin Iannetta 
