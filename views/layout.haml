@@ -2,13 +2,19 @@
   %head
     %title Benjamin Iannetta
     %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}/
-    %link{:href => "css/bootstrap.css", :rel => "stylesheet"}/
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %script{:src=> "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :type=> "text/javascript"}
+    %script{:src=> "js/bootstrap.min.js", :type=> "text/javascript"}
 
   %body
-    #header
-      %div.container
-        %h1.title Benjamin Iannetta
-    %div.wrap
+    #wrap
+      #header
+        %div.container
+          %div{:class => 'col-md-2'}
+            %span.logo
+          %div{:class => 'col-md-10'}  
+            %h1.title Benjamin Iannetta
       %div.container
         #navigation{:class => 'col-md-2'}
           %ul{:class => ['nav', 'nav-pills', 'nav-stacked']}
@@ -19,4 +25,4 @@
           = yield
     #footer
       %div.container 
-        %p.text-muted &copy; Copyright Benjamin Iannetta 
+        %p{:class => ['copyright', 'text-muted']} &copy; Copyright Benjamin Iannetta 
