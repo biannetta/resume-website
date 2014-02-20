@@ -1,7 +1,7 @@
 %html{:lang => "en" }
   %head
     %title Benjamin Iannetta
-    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}/
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}/
     %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}/
     %link{:href => "css/style.css", :rel => "stylesheet"}/
     %script{:src=> "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", :type=> "text/javascript"}
@@ -9,20 +9,21 @@
 
   %body
     #wrap
-      #header
-        %div.container
-          %div{:class => 'col-md-2'}
-            %span.logo
-          %div{:class => 'col-md-10'}  
-            %h1.title Benjamin Iannetta
       %div.container
-        #navigation{:class => 'col-md-2'}
-          %ul{:class => ['nav', 'nav-pills', 'nav-stacked']}
-            - @links.each do |link|
-              %li
-                %a{:href => "#{link[:href]}"} #{link[:name]}
-        #content{:class => 'col-md-10'}
-          = yield
+        %div.row
+          %div{:class => 'col-md-3'}
+            %img.img-circle{:src => 'http://www.gravatar.com/avatar/beafe09004cd9b10646b8401a45256d1?s=200'}
+          %div{:class => 'col-md-7'}  
+            %h1.title Benjamin Iannetta
+            %small #{profile.headline}
+        %div.row
+          #navigation{:class => 'col-md-2'}
+            %ul{:class => ['nav', 'nav-pills', 'nav-stacked']}
+              - @links.each do |link|
+                %li
+                  %a{:href => "#{link[:href]}"} #{link[:name]}
+          #content{:class => 'col-md-8'}
+            = yield
     #footer
       %div.container 
         %p{:class => ['copyright', 'text-muted']} &copy; Copyright Benjamin Iannetta 
