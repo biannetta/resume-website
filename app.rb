@@ -11,9 +11,10 @@ end
 
 get '/' do
 	@links = [
-		{:name => 'LinkedIn', :href => 'http://www.linkedin.com'},
-		{:name => 'Twitter', :href => 'http://www.twitter.com'},
-		{:name => 'Github', :href => 'http://www.github.com'}
+		{:name => 'LinkedIn', :href => 'http://ca.linkedin.com/in/biannetta', :icon => 'fa-linkedin'},
+		{:name => 'Twitter', :href => 'http://www.twitter.com/biannetta', :icon => 'fa-twitter'},
+		{:name => 'Facebook', :href => 'http://www.facebook.com/benjamin.iannetta', :icon => 'fa-facebook'},
+		{:name => 'Github', :href => 'http://www.github.com/biannetta', :icon => 'fa-github'}
 	]
 	client = LinkedIn::Client.new(settings.api, settings.secret)
 	client.authorize_from_access(settings.otoken, settings.osecret);

@@ -1,15 +1,28 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-/* Gizoogle Fizonts */
+/* Mixins */
+.center {
+  text-align: center;
+}
+.vcentre { /* Cause I'm Canadian eh */
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
 /* Structure */
 html,
 body {
   height: 100%;
 }
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 #wrap {
   min-height: 100%;
   height: auto;
   margin: 0 auto -60px;
-  padding: 0 0 60px;
+  padding: 0 0 70px;
 }
 #footer {
   height: 60px;
@@ -17,10 +30,36 @@ body {
   background-color: #f5f5f5;
 }
 .copyright {
+  margin-top: 10px;
+  margin-bottom: 0px;
   text-align: center;
-  margin-top: 20px;
 }
+.power {
+  text-align: center;
+}
+
 /* Headings */
-h1.title {
+.main-title {
   font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  font-weight: bolder;
+  /* unsure about colour scheming for title
+  color: #fff;
+  text-shadow: 2px 2px 2px #122A40;*/
+}
+.sub-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+/* Links */
+.fa {
+  width: 20px;
+  text-align: center;
+}
+
+/* Content */
+.lead {
+  text-align: center;
 }
