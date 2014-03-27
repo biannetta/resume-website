@@ -18,7 +18,7 @@ get '/' do
 	]
 	client = LinkedIn::Client.new(settings.api, settings.secret)
 	client.authorize_from_access(settings.otoken, settings.osecret);
-	haml :index, :locals => { :profile => client.profile }
+	haml :index, :locals => { :profile => client.profile, :content => "Description Coming Soon" }
 end
 
 not_found do

@@ -6,11 +6,26 @@
 .center {
 	text-align: center;
 }
+.spacer {
+	.margin-top(50px);
+}
+.no-padding {
+	padding: 0 !important;
+}
+
+/* Functions */
+.margin-top(@amount) {
+	margin-top: @amount;
+}
 
 /* Structure */
 html,
 body {
 	height: 100%;
+}
+header {
+	padding-top: 10px;
+ 	padding-bottom: 10px;
 }
 #wrap {
 	min-height: 100%;
@@ -33,6 +48,26 @@ body {
 	.center;
 }
 /* Headings */
-h1.title {
+.title {
 	font-family: @google-font;
+  	font-size: 50px;
+  	font-weight: bolder;
+}
+.mobile-title {
+	.title;
+	margin-top: 15px;
+	font-size: 1em;
+	color: whitesmoke;
+	padding-left: 5px;
+}
+
+/* Links */
+.fa {
+  width: 20px;
+  text-align: center;
+}
+
+/* Content */
+.lead {
+  text-align: center;
 }
