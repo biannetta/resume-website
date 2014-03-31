@@ -4,6 +4,7 @@ GEM
     haml (4.0.4)
       tilt
     hashie (2.0.5)
+    kramdown (1.3.3)
     linkedin (0.4.6)
       hashie (>= 1.2, < 2.1)
       multi_json (~> 1.0)
@@ -27,6 +28,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   haml
+  kramdown
   linkedin
   shotgun
   sinatra

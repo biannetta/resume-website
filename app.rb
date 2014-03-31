@@ -11,14 +11,15 @@ end
 
 get '/' do
 	@links = [
-		{:name => 'LinkedIn', :href => 'http://ca.linkedin.com/in/biannetta', :icon => 'fa-linkedin'},
-		{:name => 'Twitter', :href => 'http://www.twitter.com/biannetta', :icon => 'fa-twitter'},
-		{:name => 'Facebook', :href => 'http://www.facebook.com/benjamin.iannetta', :icon => 'fa-facebook'},
-		{:name => 'Github', :href => 'http://www.github.com/biannetta', :icon => 'fa-github'}
+		{:name => 'LinkedIn', :href => 'http://ca.linkedin.com/in/biannetta', :icon => 'fa-linkedin fa-lg'},
+		{:name => 'Twitter', :href => 'http://www.twitter.com/biannetta', :icon => 'fa-twitter fa-lg'},
+		{:name => 'Facebook', :href => 'http://www.facebook.com/benjamin.iannetta', :icon => 'fa-facebook fa-lg'},
+		{:name => 'Github', :href => 'http://www.github.com/biannetta', :icon => 'fa-github fa-lg'}
 	]
 	client = LinkedIn::Client.new(settings.api, settings.secret)
-	client.authorize_from_access(settings.otoken, settings.osecret);
-	haml :index, :locals => { :profile => client.profile, :content => "Description Coming Soon" }
+	client.authorize_from_access(settings.otoken, settings.osecret)
+
+	haml :index, :locals => { :profile => client.profile}
 end
 
 not_found do
