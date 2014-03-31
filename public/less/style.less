@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 @google-font: 'Open Sans', sans-serif;
+@brand-primary: #428bca;
 
 /* Mixins */
 .center {
@@ -26,6 +27,9 @@ body {
 header {
 	padding-top: 10px;
  	padding-bottom: 10px;
+ 	margin-bottom: 20px;
+ 	background-color: @brand-primary;
+ 	color: white;
 }
 #wrap {
 	min-height: 100%;
@@ -47,11 +51,18 @@ header {
 .power {
 	.center;
 }
+.profile {
+	border: 5px solid white;
+}
 /* Headings */
+#brand {
+	padding-top: 40px;
+}
 .title {
 	font-family: @google-font;
   	font-size: 50px;
   	font-weight: bolder;
+  	text-shadow: 0px 2px 3px #555;
 }
 .mobile-title {
 	.title;

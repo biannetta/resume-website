@@ -13,11 +13,11 @@
       %div{:class => 'navbar navbar-fixed-top navbar-inverse hidden-lg hidden-md visible-sm visible-xs'}
         %h1{:class => 'pull-left mobile-title'} Benjamin Iannetta, MBA
         %div.navbar-header
-          %button.navbar-toggle{:type => "button", :data => {:toggle => "collapse", :target => ".navbar-collapse"}}
+          %button.navbar-toggle{:class => 'visible-sm visible-xs', :type => "button", :data => {:toggle => "collapse", :target => ".navbar-collapse"}}
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-        %div{:class => 'navbar-collapse collapse no-padding'}
+        %div{:class => 'navbar-collapse collapse no-padding hidden-md'}
           %ul{:class => 'nav nav-stacked'}
             - @links.each do |link|
               %li
@@ -30,8 +30,8 @@
             %div{:class => 'col-sm-3 hidden-lg hidden-md visible-sm visible-xs spacer'}
           %div.row
             %div{:class => 'col-md-3 center'}
-              %img.img-circle{:src => 'http://s.gravatar.com/avatar/beafe09004cd9b10646b8401a45256d1?s=200'}
-            %div{:class => 'col-md-7 center hidden-sm hidden-xs'}
+              %img{:class => 'profile img-circle', :src => 'http://s.gravatar.com/avatar/beafe09004cd9b10646b8401a45256d1?s=200'}
+            #brand{:class => 'col-md-7 center hidden-sm hidden-xs'}
               %h1.title Benjamin Iannetta
               %span.sub-title #{profile.headline}
       %div.container
