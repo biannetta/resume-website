@@ -44,7 +44,8 @@ header {
   text-align: center;
 }
 .profile {
-  border: 5px solid white;
+  border: 0 solid white;
+  height: 200px;
 }
 /* Headings */
 #brand {
@@ -72,11 +73,14 @@ header {
   text-align: center;
 }
 /* Content */
+#content {
+  font-size: 1.2em;
+}
 .lead {
   text-align: justify;
 }
 .specialties {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .section {
   display: block;
