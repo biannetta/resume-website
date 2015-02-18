@@ -14,7 +14,8 @@ get '/' do
 		{:name => 'LinkedIn', :href => 'http://ca.linkedin.com/in/biannetta', :icon => 'fa-linkedin fa-lg'},
 		{:name => 'Twitter', :href => 'http://www.twitter.com/biannetta', :icon => 'fa-twitter fa-lg'},
 		{:name => 'Facebook', :href => 'http://www.facebook.com/benjamin.iannetta', :icon => 'fa-facebook fa-lg'},
-		{:name => 'Github', :href => 'http://www.github.com/biannetta', :icon => 'fa-github fa-lg'}
+		{:name => 'Github', :href => 'http://www.github.com/biannetta', :icon => 'fa-github fa-lg'},
+		{:name => 'Resume', :href => 'Benjamin-Iannetta-2015.pdf', :icon => 'fa-file-pdf-o fa-lg'}
 	]
 	client = LinkedIn::Client.new(settings.api, settings.secret)
 	client.authorize_from_access(settings.otoken, settings.osecret)
