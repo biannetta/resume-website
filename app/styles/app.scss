@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+$steele: #215c8e;
 $blue: #428bca;
 $grey: #f5f5f5;
 $white: white;
 
 /* Main Body */
 html {
-  background-color: $blue;
+  background-color: $steele;
 }
 body {
   background-color: $white;
@@ -21,6 +21,18 @@ body > .ember-view {
 }
 
 /* Header */
+.app-header {
+  @media screen and (max-width: 500px) {
+      display: inline;
+  }
+  background-color: $steele;
+  color: $white;
+  display: none;
+  font-weight: bolder;
+  font-size: 1.2em;
+  padding-left: 15px;
+  text-shadow: 0px 2px 3px #555;
+}
 header {
   align-items: center;
   background-color: $blue;
@@ -30,6 +42,9 @@ header {
   padding: 10px 0;
 }
 .brand {
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
    .title {
     font-size: 50px;
     font-weight: bolder;
@@ -47,6 +62,11 @@ header {
 
 /* Content */
 .container {
+  @media screen and (max-width: 300px) {
+      flex-direction: column;
+  }
+  display: flex;
+  flex-wrap: wrap;
   font-size: 1.2em;
   margin-top: 10px;
 }
@@ -65,6 +85,19 @@ header {
 .specialties .label {
   padding: 5px;
   margin: 2px;
+}
+ul {
+  @media screen and (max-width: 991px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+  }
+}
+.link-text {
+  @media screen and (max-width: 500px) {
+      display: none;
+  }
 }
 
 /* Footer */
