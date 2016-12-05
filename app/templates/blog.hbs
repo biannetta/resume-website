@@ -1,0 +1,9 @@
+<div class='container'>
+  {{#each model as |post|}}
+  <div class='post'>
+    <span class='date'>{{post.timestamp}}</span><h2>{{post.title}}</h2>
+  </div>
+  {{else}}
+    <h3>Nothing to see here</h3>
+  {{/each}}
+</div>
