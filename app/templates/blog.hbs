@@ -1,7 +1,8 @@
 <div class='container'>
   {{#each model as |post|}}
-  <div class='post'>
-    <span class='date'>{{post.timestamp}}</span><h2>{{post.title}}</h2>
+  <div class='post-banner'>
+    {{post-date month=(extract-date post.timestamp 'MMM') day=(extract-date post.timestamp 'D')}}
+    <h2>{{post.title}}</h2>
   </div>
   {{else}}
     <h3>Nothing to see here</h3>

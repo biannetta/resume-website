@@ -112,3 +112,31 @@ footer {
   margin-top: 10px;
   margin-bottom: 0px;
 }
+
+/* Blogs */
+.post {
+  display: flex;
+}
+.post-banner {
+  display: flex;
+  justify-content: space-between;
+}
+.date {
+  align-items: stretch;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 80px;
+  text-align: center;
+  .month {
+    background-color: red;
+    border-bottom: 1px solid red;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .day {
+    font-size: 2.5em;
+  }
+}
