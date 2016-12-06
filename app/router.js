@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('blog', function() {
     this.route('post', {path: '/:post_id'});
   });
+  this.route('admin');
   this.route('404', {path: '/*path'});
 });
 
