@@ -5,4 +5,5 @@ export default DS.Model.extend({
   body: DS.attr('string'),
   timestamp: DS.attr('number'),
   published: DS.attr('boolean'),
+  slug: DS.attr('string'),
 });

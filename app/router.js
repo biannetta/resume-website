@@ -7,9 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('home', {path: '/'});
   this.route('blog', function() {
-    this.route('post', {path: '/:post_id'});
+    this.route('post', {path: '/:slug'});
   });
   this.route('admin');
   this.route('404', {path: '/*path'});

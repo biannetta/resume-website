@@ -114,12 +114,26 @@ footer {
 }
 
 /* Blogs */
+.posts {
+  flex-direction: column-reverse;
+}
 .post {
+  border-bottom: 4px solid $grey;
   display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
 }
 .post-banner {
+  align-items: flex-end;
   display: flex;
-  justify-content: space-between;
+  h2 {
+    font-size: 2.5em;
+    padding-left: 15px;
+    a {
+      text-decoration: none;
+    }
+  }
 }
 .date {
   align-items: stretch;
