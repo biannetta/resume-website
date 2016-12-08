@@ -8,5 +8,8 @@ export default Ember.Route.extend({
     }).then(function (posts) {
       return posts.get('firstObject');
     });
+  },
+  renderTemplate: function() {
+    this.render('blog.post', {into: 'application'});
   }
 });

@@ -7,5 +7,5 @@ export default Ember.Route.extend({
     }).then(posts => posts.filter((post) => {
       return post.get('published') === true;
     })
-  )},
+  );},
 });
