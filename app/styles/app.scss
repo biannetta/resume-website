@@ -178,7 +178,15 @@ footer {
   display: flex;
   flex-direction: column;
   padding: 5px 10px;
-  text-align: justify;
+  text-align: left;
+  span {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+  }
+  .fa-quote-right {
+    align-self: flex-end;
+  }
 }
 .credit {
   color: #c3c2c2;
@@ -186,6 +194,6 @@ footer {
   font-style: italic;
   text-align: right;
 }
-.quotation {
-  font-size: 2.5em;
+button.return-home {
+  border-color: gainsboro;
 }
