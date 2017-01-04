@@ -1,32 +1,10 @@
 <ul class='nav nav-pills nav-stacked'>
+{{#each links as |link|}}
   <li>
-    <a href='http://ca.linkedin.com/in/biannetta'>
-      <i class='fa fa-linkedin fa-lg'></i>
-      <span class='link-text'>LinkedIn</span>
+    <a href='{{link.link}}' target='{{link.target}}'>
+      <i class='fa fa-{{link.icon}} fa-lg'></i>
+      <span class='link-text'>{{link.text}}</span>
     </a>
   </li>
-  <li>
-    <a href='http://www.twitter.com/biannetta'>
-      <i class='fa fa-twitter fa-lg'></i>
-      <span class='link-text'>Twitter</span>
-    </a>
-  </li>
-  <li>
-    <a href='http://www.facebook.com/benjamin.iannetta'>
-      <i class='fa fa-facebook fa-lg'></i>
-      <span class='link-text'>Facebook</span>
-    </a>
-  </li>
-  <li>
-    <a href='http://www.github.com/biannetta'>
-      <i class='fa fa-github fa-lg'></i>
-      <span class='link-text'>Github</span>
-    </a>
-  </li>
-  <li>
-    <a href='assets/pdf/Benjamin-Iannetta-2015.pdf' target='blank' title='Benjamin Iannetta'>
-      <i class='fa fa-file-pdf-o fa-lg'></i>
-      <span class='link-text'>Resume</span>
-    </a>
-  </li>
+{{/each}}
 </ul>
