@@ -24,6 +24,9 @@ body > .ember-view {
 .app-header {
   @media screen and (max-width: 500px) {
       display: inline;
+      position: fixed;
+      width: 100vw;
+      z-index: 1000;
   }
   background-color: $steele;
   color: $white;
@@ -34,6 +37,9 @@ body > .ember-view {
   text-shadow: 0px 2px 3px #555;
 }
 header {
+  @media screen and (max-width: 500px) {
+    padding-top: 65px;
+  }
   align-items: center;
   background-color: $blue;
   color: $white;
@@ -58,6 +64,12 @@ header {
 .profile {
   border: 0 solid white;
   max-height: 300px;
+}
+.centred {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Content */
