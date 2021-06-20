@@ -1,8 +1,8 @@
-<ul class='nav nav-pills nav-stacked'>
-{{#each links as |link|}}
-  <li>
-    <a href='{{link.link}}' target='{{link.target}}'>
-      <i class='fa fa-{{link.icon}} fa-lg'></i>
+<ul class='nav flex-column nav-pills'>
+{{#each @links as |link|}}
+  <li class="nav-item">
+    <a class="nav-link" href='{{link.link}}' target='{{link.target}}'>
+      <FaIcon @icon='{{link.icon}}' />
       <span class='link-text'>{{link.text}}</span>
     </a>
   </li>

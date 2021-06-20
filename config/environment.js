@@ -15,6 +15,9 @@ module.exports = function (environment) {
       messagingSenderId: '100835609347',
       appId: '1:100835609347:web:bd9e5051cf919c3ef53736',
     },
+    fontawesome: {
+      defaultPrefix: 'fab', // brand icons
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -33,6 +36,7 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
+    ENV.firebase.databaseURL = 'http://localhost:9000?ns=emulatorui';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

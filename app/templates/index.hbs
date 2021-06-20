@@ -1,5 +1,5 @@
 <div class="centred">
-  <SidebarLink></SidebarLink>
+  <SidebarLink @links={{@model}} />
 </div>
 <div class='col-md-10 content'>
   <p>
@@ -16,22 +16,9 @@
     <a href='assets/pdf/Benjamin-Iannetta-2021.pdf' target='blank' title='Benjamin Iannetta'>here</a>
   </p>
   <div class='row'>
-    <p class='specialties'>
-      <span class='section'>Skills:</span>
-    </p>
+    <span class='section'>Skills:</span>
   </div>
   <div class='row'>
-    <p class='specialties'>
-      <span class='label label-primary'>Agile Project Management</span>
-      <span class='label label-primary'>Desktop Application Development</span>
-      <span class='label label-primary'>Data Analytics</span>
-      <span class='label label-primary'>Product Deployment</span>
-      <span class='label label-primary'>Feed and Grain Accounting</span>
-      <span class='label label-primary'>Healthcare Revenue Management</span>
-      <span class='label label-primary'>Commodity Brokerage and Contract Management</span>
-      <span class='label label-primary'>Web and Mobile Development</span>
-      <span class='label label-primary'>Systems Integration and User Testing</span>
-      <span class='label label-primary'>Computerize Physician Order Entry</span>
-    </p>
+    <ProfileSkills /> 
   </div>
 </div>

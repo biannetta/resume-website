@@ -7,8 +7,12 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
     sassOptions: {
-      extension: 'sass',
+      extension: 'scss',
       implementation: nodeSass,
+    },
+    'ember-bootstrap': {
+      bootstrapVersion: 4,
+      importBootstrapCSS: false,
     },
   });
 
