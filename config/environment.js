@@ -36,7 +36,7 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
-    ENV.firebase.databaseURL = 'http://localhost:9000?ns=emulatorui';
+    ENV.firebase.databaseURL = 'http://localhost:8080?ns=emulatorui';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
