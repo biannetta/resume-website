@@ -4,9 +4,15 @@
   },
   "hosting": {
     "public": "dist",
-    "rewrites": [{
-      "source": "/blog",
-      "destination": "/index.html"
-    }]
+    "rewrites": [
+      {
+        "source": "/blog",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
 }

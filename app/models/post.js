@@ -1,9 +1,9 @@
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
-export default DS.Model.extend({
-  title: DS.attr('string'),
-  body: DS.attr('string'),
-  timestamp: DS.attr('number'),
-  published: DS.attr('boolean'),
-  slug: DS.attr('string'),
-});
+export default class Post extends Model {
+  @attr('string') title;
+  @attr('string') body;
+  @attr('number') timestamp;
+  @attr('boolean') published;
+  @attr('string') slug;
+}

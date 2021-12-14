@@ -1,14 +1,19 @@
-/*jshint node:true*/
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+'use strict';
 
-module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const nodeSass = require('node-sass');
+
+module.exports = function (defaults) {
+  let app = new EmberApp(defaults, {
     // Add options here
     sassOptions: {
       extension: 'scss',
-      implementation: require("node-sass")
-    }
+      implementation: nodeSass,
+    },
+    'ember-bootstrap': {
+      bootstrapVersion: 4,
+      importBootstrapCSS: false,
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

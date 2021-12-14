@@ -1,0 +1,10 @@
+<ul class='nav flex-column nav-pills'>
+{{#each @links as |link|}}
+  <li class="nav-item">
+    <a class="nav-link" href='{{link.link}}' target='{{link.target}}'>
+      <FaIcon @icon='{{link.icon}}' />
+      <span class='link-text'>{{link.text}}</span>
+    </a>
+  </li>
+{{/each}}
+</ul>
