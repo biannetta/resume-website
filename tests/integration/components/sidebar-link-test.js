@@ -13,14 +13,5 @@ module('Integration | Component | sidebar-link', function (hooks) {
     await render(hbs`<SidebarLink />`);
 
     assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <SidebarLink>
-        template block text
-      </SidebarLink>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

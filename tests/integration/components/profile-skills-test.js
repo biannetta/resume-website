@@ -12,15 +12,6 @@ module('Integration | Component | profile-skills', function (hooks) {
 
     await render(hbs`<ProfileSkills />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <ProfileSkills>
-        template block text
-      </ProfileSkills>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.notEqual(this.element.textContent.trim(), '');
   });
 });
