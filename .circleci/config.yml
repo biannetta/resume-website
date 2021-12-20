@@ -9,11 +9,11 @@ orbs:
 jobs:
   install-node:
     docker:
-      - image: 'circleci/node:14.17.3'
+      - image: 'cimg/base:stable'
     steps:
       - checkout
       - node/install:
-          node-version: '16.10'
+          node-version: '14.17.0'
       - run: npm i bower -g
       - run: npm install
       - run: bower install
