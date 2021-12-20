@@ -15,10 +15,6 @@ jobs:
       - node/install:
           node-version: '16.10'
       - run: node --version
-  install-bower:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
       - run: npm i bower -g
       - run: bower --v
 
@@ -29,4 +25,3 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - install-node
-      - install-bower
