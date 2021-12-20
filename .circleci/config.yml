@@ -14,9 +14,9 @@ jobs:
       - checkout
       - node/install:
           node-version: '16.10'
-      - run: node --version
       - run: npm i bower -g
-      - run: bower --v
+      - run: npm install
+      - run: bower install
       - run: npm run test
 
 # Invoke jobs via workflows
