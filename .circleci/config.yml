@@ -15,7 +15,8 @@ jobs:
       - node/install:
           node-version: '14.17.0'
       - run: npm i bower -g
-      - run: npm install
+      - run: npm i phantomjs-prebuilt
+      - node/install-packages
       - run: bower install
       - run: npm run test
 
