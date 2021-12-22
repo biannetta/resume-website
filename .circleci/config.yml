@@ -15,7 +15,7 @@ jobs:
       - node/install:
           node-version: '14.17.0'
       - run: npm i bower -g
-      - run: sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
+      - run: npm i phantomjs
       - node/install-packages
       - run: bower install
       - run: npm run test
