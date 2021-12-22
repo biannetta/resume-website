@@ -16,7 +16,7 @@ jobs:
       - node/install-packages
       - run: bower install
       - run: npm run test:ember -- ci --silent --r xunit | tee ./tests/results.xml
-      - store_test_results:
+      - store_artifacts:
           path: ./tests
 
 # Invoke jobs via workflows
