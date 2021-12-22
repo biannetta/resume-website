@@ -9,13 +9,10 @@ orbs:
 jobs:
   install-node:
     docker:
-      - image: 'circleci/node:7.10-browsers'
+      - image: 'circleci/node:14.17.0-browsers'
     steps:
       - checkout
-      - node/install:
-          node-version: '14.17.0'
       - run: npm i bower -g
-      - run: npm i phantomjs
       - node/install-packages
       - run: bower install
       - run: npm run test
