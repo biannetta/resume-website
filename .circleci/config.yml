@@ -15,9 +15,9 @@ jobs:
       - run: sudo npm i bower -g
       - node/install-packages
       - run: bower install
-      - run: npm run test:ember -- ci --silent --r xunit | tee ./tests/xunit.xml
+      - run: npm run test:ember -- ci --silent --r xunit | tee ./tests/results.xml
       - store_test_results:
-          path: ./tests/xunit.xml
+          path: ./tests
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
