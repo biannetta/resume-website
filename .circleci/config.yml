@@ -17,7 +17,7 @@ jobs:
       - run: bower install
       - run: npm run test:ember -- ci --silent --r xunit | tee ./tests/results.xml
       - store_artifacts:
-          path: ./tests
+          path: ./tests/results.xml
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
