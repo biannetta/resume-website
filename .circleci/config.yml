@@ -18,6 +18,7 @@ jobs:
       - run: ./node_modules/ember-cli/bin/ember test --silent --r xunit > ./tests/results.xml
       - store_test_results:
           path: ./tests/results.xml
+
   build:
     docker:
       - image: 'circleci/node:14.17.0-browsers'
@@ -26,8 +27,7 @@ jobs:
       - run: sudo npm i bower -g
       - node/install-packages
       - run: bower install
-      - node/run:
-          npm-run: build
+      - run: npm run build
       - store_artifacts:
           path: ./dist/
 
@@ -37,4 +37,5 @@ workflows:
   build-test-deploy: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - install-node
+      - test
+      - build
