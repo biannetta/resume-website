@@ -15,7 +15,7 @@ jobs:
       - run: sudo npm i bower -g
       - node/install-packages
       - run: bower install
-      - run: npm run test:ember -- ci --silent --r xunit | tee ./tests/results.xml
+      - run: npm run test:ember -- ci --silent --r xunit > ./tests/results.xml
       - store_artifacts:
           path: ./tests/results.xml
 
