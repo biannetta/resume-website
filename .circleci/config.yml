@@ -19,7 +19,7 @@ jobs:
       - store_test_results:
           path: ./tests/results.xml
 
-  build:
+  build-deploy:
     docker:
       - image: 'circleci/node:14.17.0-browsers'
     steps:
@@ -30,7 +30,8 @@ jobs:
       - run: npm run build
       - store_artifacts:
           path: ./dist/
-
+      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+    
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -38,4 +39,6 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - test
-      - build
+      - build-deploy:
+          requires:
+            - test
