@@ -1,6 +1,6 @@
 # Biannetta
 
-[![Build Status](https://travis-ci.org/biannetta/biannetta.com.svg?branch=master)](https://travis-ci.org/biannetta/biannetta.com)
+[![CircleCI](https://circleci.com/gh/biannetta/resume-website/tree/master.svg?style=svg)](https://circleci.com/gh/biannetta/resume-website/tree/master)
 
 This is my resume website with which I try to experiment different web based tools. The master branch is built using Ember.js and deployed on Firebase hosting.
 
@@ -16,7 +16,7 @@ If you would like to download the source code and build my site for yourself, yo
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd biannetta`
+* `cd resume-website`
 * `npm install`
 * `bower install`
 
