@@ -12,9 +12,7 @@ jobs:
       - image: 'circleci/node:14.17.0-browsers'
     steps:
       - checkout
-      - run: sudo npm i bower -g
       - node/install-packages
-      - run: bower install
       - run: ./node_modules/.bin/ember test --silent --r xunit > ./tests/results.xml
       - store_test_results:
           path: ./tests/results.xml
@@ -24,9 +22,7 @@ jobs:
       - image: 'circleci/node:14.17.0-browsers'
     steps:
       - checkout
-      - run: sudo npm i bower -g
       - node/install-packages
-      - run: bower install
       - run: npm run build
       - store_artifacts:
           path: ./dist/
