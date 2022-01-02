@@ -8,6 +8,10 @@
 /node_modules
 /bower_components
 
+# firebase files
+.firebase
+*.log
+
 # misc
 /.sass-cache
 /connect.lock
@@ -15,6 +19,4 @@
 /libpeerconnection.log
 npm-debug.log*
 testem.log
-.firebase
-*.log
 .eslintcache

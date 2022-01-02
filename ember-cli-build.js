@@ -1,18 +1,14 @@
 'use strict';
-
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const nodeSass = require('node-sass');
+const tailwind = require('tailwindcss');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
-    sassOptions: {
-      extension: 'scss',
-      implementation: nodeSass,
-    },
-    'ember-bootstrap': {
-      bootstrapVersion: 4,
-      importBootstrapCSS: false,
+    postcssOptions: {
+      compile: {
+        cacheInclude: [/.*\.(css|hbs)$/, /.tailwind\.config\.js$/],
+        plugins: [tailwind('./tailwind.config.js')],
+      },
     },
   });
 

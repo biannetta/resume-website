@@ -1,9 +1,9 @@
-<ul class='nav flex-column nav-pills'>
+<ul class='flex flex-col ml-10 mr-10'>
 {{#each @links as |link|}}
-  <li class="nav-item">
-    <a class="nav-link" href='{{link.link}}' target='{{link.target}}'>
+  <li class='leading-10 p-1 text-blue-950 hover:bg-blue-950 hover:text-white'>
+    <a href='{{link.link}}' target='{{link.target}}'>
       <FaIcon @icon='{{link.icon}}' />
-      <span class='link-text'>{{link.text}}</span>
+      <span>{{link.text}}</span>
     </a>
   </li>
 {{/each}}
