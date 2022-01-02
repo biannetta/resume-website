@@ -6,7 +6,7 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     postcssOptions: {
       compile: {
-        cacheInclude: [/.*\.(css|hbs)$/, /.tailwind\.config\.js$/],
+        cacheInclude: [/.*\.(css|hbs|html)$/, /.tailwind\.config\.js$/],
         plugins: [tailwind('./tailwind.config.js')],
       },
     },
