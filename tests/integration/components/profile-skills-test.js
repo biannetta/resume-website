@@ -7,11 +7,10 @@ module('Integration | Component | profile-skills', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('skillList', [{ text: 'skill1' }]);
 
-    await render(hbs`<ProfileSkills />`);
+    await render(hbs`<ProfileSkills @skills={{this.skillList}} />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.querySelector('span').innerHTML, 'skill1');
   });
 });
