@@ -1,12 +1,5 @@
 <p class='text-white flex flex-wrap text-base'>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Agile Project Management</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Desktop Application Development</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Data Analytics</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Product Deployment</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Feed and Grain Accounting</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Healthcare Revenue Management</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Commodity Brokerage and Contract Management</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Web and Mobile Development</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Systems Integration and User Testing</span>
-  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>Computerize Physician Order Entry</span>
+  {{#each @skills as |skill|}}
+  <span class='bg-blue-950 leading-none p-1 m-0.5 rounded-md'>{{skill.text}}</span>
+  {{/each}}
 </p>
