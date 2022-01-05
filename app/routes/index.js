@@ -1,13 +1,11 @@
 import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
 
 export default class IndexRoute extends Route {
-  @service store;
-
   async model() {
     return {
-      links: this.store.findAll('link'),
-      skills: this.store.findAll('skill'),
+      links: await this.store.findAll('link'),
+      skills: await this.store.findAll('skill'),
+      profile: await this.store.findAll('profile'),
     };
   }
 }
