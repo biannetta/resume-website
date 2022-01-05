@@ -1,0 +1,5 @@
+{{#each @profile as |contents| }}
+  {{#each-in contents.paragraphs as |key paragraph| }}
+    <p class='mb-4 pl-1 pr-1'>{{{paragraph}}}</p>
+  {{/each-in}}
+{{/each}}
