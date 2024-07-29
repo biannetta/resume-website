@@ -32,7 +32,7 @@ jobs:
           name: Deploy on Firebase
           command: |
             echo $SA_KEY > credentials.json
-            GOOGLE_APPLICATION_CREDENTIALS=credentials.json firebase deploy
+            GOOGLE_APPLICATION_CREDENTIALS=credentials.json ./node_modules/.bin/firebase deploy
     
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
